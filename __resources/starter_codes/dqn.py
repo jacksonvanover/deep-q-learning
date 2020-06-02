@@ -89,22 +89,18 @@ def compute_td_loss(model, batch_size, gamma, replay_buffer):
 
     # this is taking the state and querying the prediction network 
     # to see what q values it gives for each possible action given
-    # that we are in this particular state
-    q_this_state_predicted, _ = model.forward(state).max(1)
+    # that we are in this particular state; we then take choose the
+    # q-value corresponding with the action that was taken during 
+    # the training experience
+    q_this_state_predicted = model.forward(state).gather(1, action.unsqueeze(1)).view(-1)
+
+    # calculate target q-values based on Bellman's equation
     next_q_values, _ = model.forward(next_state).max(1)
     q_this_state_target = reward + ( gamma * next_q_values )
 
 
-    # print("q_this_state_target {}: {}".format(q_this_state_target.size(), q_this_state_target))
-    # print("q_this_state_predicted {}: {}".format(q_this_state_predicted.size(), q_this_state_predicted))
-
-    loss = (q_this_state_target - q_this_state_predicted).pow(2).sum() # do i need to divide by batch_size?
-
-    # print("loss: {}".format(loss))
-
-
-
-
+    loss = (q_this_state_target - q_this_state_predicted).pow(2).sum()
+    
     ######## YOUR CODE HERE! ########
     return loss
 
