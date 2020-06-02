@@ -91,15 +91,16 @@ def compute_td_loss(model, batch_size, gamma, replay_buffer):
     # to see what q values it gives for each possible action given
     # that we are in this particular state
     q_this_state_predicted, _ = model.forward(state).max(1)
-    #print("q_this_state_predicted {}: {}".format(q_this_state_predicted.size(), q_this_state_predicted))
-
     next_q_values, _ = model.forward(next_state).max(1)
     q_this_state_target = reward + ( gamma * next_q_values )
-    #print("q_this_state_target {}: {}".format(q_this_state_target.size(), q_this_state_target))
-
-    loss = (q_this_state_target - q_this_state_predicted).pow(2).sum()
 
 
+    # print("q_this_state_target {}: {}".format(q_this_state_target.size(), q_this_state_target))
+    # print("q_this_state_predicted {}: {}".format(q_this_state_predicted.size(), q_this_state_predicted))
+
+    loss = (q_this_state_target - q_this_state_predicted).pow(2).sum() # do i need to divide by batch_size?
+
+    # print("loss: {}".format(loss))
 
 
 
@@ -120,17 +121,19 @@ class ReplayBuffer(object):
 
     def sample(self, batch_size):
         ######## YOUR CODE HERE! ########
-        # TODO: Randomly sampling data with specific batch size from the buffer
-        # Hint: you may use the python library "random".
-        # If you are not familiar with the "deque" python library, please google it.
 
-        # samples = np.random.choices(self.buffer, batch_size, replace=False)
+
+
+
         samples = random.sample(self.buffer, batch_size)
         state = [ x[0] for x in samples ]
         action = [ x[1] for x in samples ]
         reward = [ x[2] for x in samples ]
         next_state = [ x[3] for x in samples ]
         done = [ x[4] for x in samples ]
+
+
+
 
         ######## YOUR CODE HERE! ########
         return np.concatenate(state), action, reward, np.concatenate(next_state), done
