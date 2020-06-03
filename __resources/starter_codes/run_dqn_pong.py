@@ -19,7 +19,7 @@ env = wrap_pytorch(env)
 
 num_frames = 1000000
 batch_size = 32
-gamma = 0.80
+gamma = 0.99
     
 replay_initial = 10000
 replay_buffer = ReplayBuffer(100000)
