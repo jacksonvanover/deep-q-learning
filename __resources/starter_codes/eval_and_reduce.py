@@ -40,7 +40,7 @@ if len(sys.argv) > 1:
 # no random actions during this eval stage
 epsilon = -1
 
-num_frames = 30000
+num_frames = 100000
 
 state = env.reset()
 
@@ -69,13 +69,13 @@ for frame_idx in range(1, 1 + num_frames):
     #     print('#Frame: {}, Loss: {}'.format(frame_idx, np.mean(losses)))
     #     print('Last-10 average reward: {}'.format(np.mean(all_rewards[-10:])))
 
-embeddings = []
-samples = model.replay_buffer.sample(1000)
+# embeddings = []
+# samples = model.replay_buffer.sample(1000)
 
-for sample in samples:
-    embeddings.append(model.features(sample))
+# for sample in samples:
+#     embeddings.append(model.features(sample))
 
-from sklearn.manifold import Isomap
+# from sklearn.manifold import Isomap
 
-x = sklearn.manifold.Isomap(n_components=2)
-x.fit(embeddings)
+# x = sklearn.manifold.Isomap(n_components=2)
+# x.fit(embeddings)
