@@ -12,6 +12,8 @@ import torch.nn.functional as F
 USE_CUDA = torch.cuda.is_available()
 from dqn import QLearner, compute_td_loss, ReplayBuffer
 import sys
+Variable = lambda *args, **kwargs: autograd.Variable(*args, **kwargs).cuda() if USE_CUDA else autograd.Variable(*args, **kwargs)
+import hashlib
 
 # initialize the game environment
 env_id = "PongNoFrameskip-v4"
@@ -62,20 +64,34 @@ for frame_idx in range(1, 1 + num_frames):
         all_rewards.append(episode_reward)
         episode_reward = 0
 
-    # if frame_idx % 10000 == 0 and len(replay_buffer) <= replay_initial:
-    #     print('#Frame: {}, preparing replay buffer'.format(frame_idx))
+# get 1000 samples from the replay buffer
+state, action, reward, next_state, done = model.replay_buffer.sample(1000)
 
-    # if frame_idx % 10000 == 0 and len(replay_buffer) > replay_initial:
-    #     print('#Frame: {}, Loss: {}'.format(frame_idx, np.mean(losses)))
-    #     print('Last-10 average reward: {}'.format(np.mean(all_rewards[-10:])))
+# save images
+for i, image in enumerate(state):
+    plt.imsave('./figures/{}_state'.format(i), image, cmap='gray')
 
-# embeddings = []
-# samples = model.replay_buffer.sample(1000)
+# convert to Tensors and find learned embedding
+state = Variable(torch.FloatTensor(np.float32(state)))
+embeddings = model.features(state)
+embeddings = embeddings.view(embeddings.size(0), -1)
+embeddings = model.fc[0](embeddings)
 
-# for sample in samples:
-#     embeddings.append(model.features(sample))
+# dimensionality reduction
+from sklearn.manifold import Isomap
+x = sklearn.manifold.Isomap(n_components=2)
+x.fit(embeddings)
 
-# from sklearn.manifold import Isomap
+import plotly.graph_objects as go
+fig = go.Figure(
+    data=go.Scatter(
+        x=np.concatenate(x.embedding_[:][0]),
+        y=np.concatenate(x.embedding_[:][1]),
+        mode='markers',
+        marker=dict(
+            color=action
+        ) 
+    )
+)
 
-# x = sklearn.manifold.Isomap(n_components=2)
-# x.fit(embeddings)
+fig.write_html("./figures/dim_reduction.html")
