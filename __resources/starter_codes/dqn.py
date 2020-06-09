@@ -49,15 +49,8 @@ class QLearner(nn.Module):
             state   = Variable(torch.FloatTensor(np.float32(state)).unsqueeze(0), requires_grad=True)
             ######## YOUR CODE HERE! ########
 
-
-
-            # get the vector of q values (max CDR for each possible action)
             q_value = self.forward(state)
-
-            # get the action that has the maximum q value (highest of the CDRs)
-            action = torch.argmax(q_value)
-
-
+            action = torch.argmax(q_value).cpu().item()
 
             ######## YOUR CODE HERE! ########
         else:
@@ -73,34 +66,14 @@ def compute_td_loss(model, batch_size, gamma, replay_buffer):
     reward = Variable(torch.FloatTensor(reward))
     done = Variable(torch.FloatTensor(done))
 
-    # print("state {}: {}".format(state.size(), state))
-    # print("next state {}: {}".format(next_state.size(), next_state))
-    # print("Action {}: {}".format(action.size(), action))
-    # print("reward {}: {}".format(reward.size(), reward))
-    # print("done {}: {}".format(done.size(), done))
-
     ######## YOUR CODE HERE! ########
     # TODO: Implement the Temporal Difference Loss
-    
 
+    q_this_state_predicted = model(state).gather(1, action.unsqueeze(1)).squeeze(1)
+    next_q_values = model(next_state).max(1)[0]
+    q_this_state_target = reward + ( gamma * next_q_values * (1 - done))
+    loss = (q_this_state_target - q_this_state_predicted).pow(2).mean().cpu().item()
 
-
-
-
-    # this is taking the state and querying the prediction network 
-    # to see what q values it gives for each possible action given
-    # that we are in this particular state; we then take choose the
-    # q-value corresponding with the action that was taken during 
-    # the training experience
-    q_this_state_predicted = model.forward(state).gather(1, action.unsqueeze(1)).view(-1)
-
-    # calculate target q-values based on Bellman's equation
-    next_q_values, _ = model.forward(next_state).max(1)
-    q_this_state_target = reward + ( gamma * next_q_values )
-
-
-    loss = (q_this_state_target - q_this_state_predicted).pow(2).sum()
-    
     ######## YOUR CODE HERE! ########
     return loss
 
@@ -118,18 +91,12 @@ class ReplayBuffer(object):
     def sample(self, batch_size):
         ######## YOUR CODE HERE! ########
 
-
-
-
         samples = random.sample(self.buffer, batch_size)
         state = [ x[0] for x in samples ]
         action = [ x[1] for x in samples ]
         reward = [ x[2] for x in samples ]
         next_state = [ x[3] for x in samples ]
         done = [ x[4] for x in samples ]
-
-
-
 
         ######## YOUR CODE HERE! ########
         return np.concatenate(state), action, reward, np.concatenate(next_state), done
