@@ -69,7 +69,7 @@ state, action, reward, next_state, done = model.replay_buffer.sample(1000)
 
 # save images
 for i, image in enumerate(state):
-    plt.imsave('./figures/{}_state'.format(i), image, cmap='gray')
+    plt.imsave('./figures/{:04d}_state.png'.format(i), image.squeeze(), cmap='gray')
 
 # convert to Tensors and find learned embedding
 state = Variable(torch.FloatTensor(np.float32(state)))
@@ -79,19 +79,42 @@ embeddings = model.fc[0](embeddings)
 
 # dimensionality reduction
 from sklearn.manifold import Isomap
-x = sklearn.manifold.Isomap(n_components=2)
-x.fit(embeddings)
+x = Isomap(n_components=2)
+x.fit(embeddings.cpu().detach().numpy())
+
+data = np.concatenate([x.embedding_, [[x.item()] for x in action], [[x] for x in range(x.embedding_.shape[0])]], axis=1)
+stay = np.array([x for x in data if x[2] == 0 or x[2] == 1])
+right = np.array([x for x in data if x[2] == 2 or x[2] == 4])
+left = np.array([x for x in data if x[2] == 3 or x[2] == 5])
 
 import plotly.graph_objects as go
-fig = go.Figure(
-    data=go.Scatter(
-        x=np.concatenate(x.embedding_[:][0]),
-        y=np.concatenate(x.embedding_[:][1]),
+
+fig = go.Figure()
+fig.add_trace(
+    go.Scatter(
+        x=stay[...,0],
+        y=stay[...,1],
         mode='markers',
-        marker=dict(
-            color=action
-        ) 
+        name='Stay',
+        text=stay[...,3]
     )
 )
-
+fig.add_trace(
+    go.Scatter(
+        x=right[...,0],
+        y=right[...,1],
+        mode='markers',
+        name='Right',
+        text=right[...,3]
+    )
+)
+fig.add_trace(
+    go.Scatter(
+        x=left[...,0],
+        y=left[...,1],
+        mode='markers',
+        name='Left',
+        text=left[...,3]
+    )
+)
 fig.write_html("./figures/dim_reduction.html")
