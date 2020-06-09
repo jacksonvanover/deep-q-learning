@@ -72,7 +72,7 @@ def compute_td_loss(model, batch_size, gamma, replay_buffer):
     q_this_state_predicted = model(state).gather(1, action.unsqueeze(1)).squeeze(1)
     next_q_values = model(next_state).max(1)[0]
     q_this_state_target = reward + ( gamma * next_q_values * (1 - done))
-    loss = (q_this_state_target - q_this_state_predicted).pow(2).mean().cpu().item()
+    loss = (q_this_state_target - q_this_state_predicted).pow(2).mean()
 
     ######## YOUR CODE HERE! ########
     return loss
