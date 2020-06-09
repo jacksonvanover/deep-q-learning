@@ -96,7 +96,7 @@ fig.add_trace(
         y=stay[...,1],
         mode='markers',
         name='Stay',
-        text=stay[...,2]
+        text=stay[...,3]
     )
 )
 fig.add_trace(
@@ -105,7 +105,7 @@ fig.add_trace(
         y=right[...,1],
         mode='markers',
         name='Right',
-        text=right[...,2]
+        text=right[...,3]
     )
 )
 fig.add_trace(
@@ -114,7 +114,7 @@ fig.add_trace(
         y=left[...,1],
         mode='markers',
         name='Left',
-        text=left[...,2]
+        text=left[...,3]
     )
 )
 fig.write_html("./figures/dim_reduction.html")
