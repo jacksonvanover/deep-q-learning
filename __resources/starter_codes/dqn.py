@@ -50,7 +50,7 @@ class QLearner(nn.Module):
             ######## YOUR CODE HERE! ########
 
             q_value = self.forward(state)
-            action = torch.argmax(q_value).cpu().item()
+            action = torch.argmax(q_value).item()
 
             ######## YOUR CODE HERE! ########
         else:
@@ -73,6 +73,22 @@ def compute_td_loss(model, batch_size, gamma, replay_buffer):
     next_q_values = model(next_state).max(1)[0]
     q_this_state_target = reward + ( gamma * next_q_values * (1 - done))
     loss = (q_this_state_target - q_this_state_predicted).pow(2).mean()
+
+    # d_q_values = model(state)
+    # d_next_q_values = model(next_state)
+    # d_q_value = d_q_values.gather(1, action.unsqueeze(1)).squeeze(1)
+    # d_next_q_value = d_next_q_values.gather(1, torch.max(d_next_q_values, 1)[1].unsqueeze(1)).squeeze(1)
+    # d_expected_q_value = reward + gamma * d_next_q_value * (1 - done)
+    # d_loss = (d_q_value - Variable(d_expected_q_value.data)).pow(2).mean()
+
+    # print(q_this_state_predicted)
+    # print(d_q_value)
+    # print()
+    # print(q_this_state_target)
+    # print(d_expected_q_value)
+    # print()
+    # print(loss)
+    # print(d_loss)
 
     ######## YOUR CODE HERE! ########
     return loss

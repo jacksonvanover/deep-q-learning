@@ -82,7 +82,7 @@ from sklearn.manifold import Isomap
 x = Isomap(n_components=2)
 x.fit(embeddings.cpu().detach().numpy())
 
-data = np.concatenate([x.embedding_, [[x.item()] for x in action], [[x] for x in range(x.embedding_.shape[0])]], axis=1)
+data = np.concatenate([x.embedding_, [[x] for x in action], [[x] for x in range(x.embedding_.shape[0])]], axis=1)
 stay = np.array([x for x in data if x[2] == 0 or x[2] == 1])
 right = np.array([x for x in data if x[2] == 2 or x[2] == 4])
 left = np.array([x for x in data if x[2] == 3 or x[2] == 5])
