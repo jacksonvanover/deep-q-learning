@@ -1,0 +1,344 @@
+#Frame: 0, preparing replay buffer
+#Frame: 10000, Loss: 0.00044952394091524184
+Last-10 average reward: -20.2
+#Frame: 20000, Loss: 0.0004647565947379917
+Last-10 average reward: -19.4
+#Frame: 30000, Loss: 0.000477040623081848
+Last-10 average reward: -19.7
+#Frame: 40000, Loss: 0.0004828772507607937
+Last-10 average reward: -19.5
+#Frame: 50000, Loss: 0.0004922758089378476
+Last-10 average reward: -18.7
+#Frame: 60000, Loss: 0.0005072439089417458
+Last-10 average reward: -17.7
+#Frame: 70000, Loss: 0.0005162968300282955
+Last-10 average reward: -16.9
+#Frame: 80000, Loss: 0.0005263377097435296
+Last-10 average reward: -16.7
+#Frame: 90000, Loss: 0.0005313479341566563
+Last-10 average reward: -15.9
+#Frame: 100000, Loss: 0.0005353005253709853
+Last-10 average reward: -15.7
+#Frame: 110000, Loss: 0.0005384051473811269
+Last-10 average reward: -14.5
+#Frame: 120000, Loss: 0.0005422430695034564
+Last-10 average reward: -14.6
+#Frame: 130000, Loss: 0.000545071205124259
+Last-10 average reward: -16.3
+#Frame: 140000, Loss: 0.0005442625842988491
+Last-10 average reward: -17.8
+#Frame: 150000, Loss: 0.0005419203662313521
+Last-10 average reward: -16.5
+#Frame: 160000, Loss: 0.0005390826263464987
+Last-10 average reward: -15.7
+#Frame: 170000, Loss: 0.0005339643103070557
+Last-10 average reward: -14.3
+#Frame: 180000, Loss: 0.000528610369656235
+Last-10 average reward: -12.6
+#Frame: 190000, Loss: 0.0005238640587776899
+Last-10 average reward: -11.5
+#Frame: 200000, Loss: 0.0005199530860409141
+Last-10 average reward: -11.4
+#Frame: 210000, Loss: 0.0005161521257832646
+Last-10 average reward: -10.1
+#Frame: 220000, Loss: 0.0005134530947543681
+Last-10 average reward: -10.7
+#Frame: 230000, Loss: 0.000509929028339684
+Last-10 average reward: -10.2
+#Frame: 240000, Loss: 0.0005054059438407421
+Last-10 average reward: -8.9
+#Frame: 250000, Loss: 0.0004998824442736804
+Last-10 average reward: -6.6
+#Frame: 260000, Loss: 0.0004946438712067902
+Last-10 average reward: -10.0
+#Frame: 270000, Loss: 0.0004899888881482184
+Last-10 average reward: -11.8
+#Frame: 280000, Loss: 0.0004859068139921874
+Last-10 average reward: -12.2
+#Frame: 290000, Loss: 0.00048210055683739483
+Last-10 average reward: -10.3
+#Frame: 300000, Loss: 0.000478523870697245
+Last-10 average reward: -6.4
+#Frame: 310000, Loss: 0.0004754754772875458
+Last-10 average reward: -8.0
+#Frame: 320000, Loss: 0.0004727884952444583
+Last-10 average reward: -11.8
+#Frame: 330000, Loss: 0.0004701951693277806
+Last-10 average reward: -9.2
+#Frame: 340000, Loss: 0.00046780527918599546
+Last-10 average reward: -8.2
+#Frame: 350000, Loss: 0.0004656022065319121
+Last-10 average reward: -8.6
+#Frame: 360000, Loss: 0.00046383144217543304
+Last-10 average reward: -7.6
+#Frame: 370000, Loss: 0.0004621453699655831
+Last-10 average reward: -5.8
+#Frame: 380000, Loss: 0.00046032012323848903
+Last-10 average reward: -7.7
+#Frame: 390000, Loss: 0.0004587982257362455
+Last-10 average reward: -11.0
+#Frame: 400000, Loss: 0.0004572109901346266
+Last-10 average reward: -8.9
+#Frame: 410000, Loss: 0.0004558927321340889
+Last-10 average reward: -6.9
+#Frame: 420000, Loss: 0.0004544382682070136
+Last-10 average reward: -7.3
+#Frame: 430000, Loss: 0.0004530091828200966
+Last-10 average reward: -7.1
+#Frame: 440000, Loss: 0.0004517592897173017
+Last-10 average reward: -5.4
+#Frame: 450000, Loss: 0.00045043716090731323
+Last-10 average reward: -2.0
+#Frame: 460000, Loss: 0.00044926349073648453
+Last-10 average reward: -5.0
+#Frame: 470000, Loss: 0.00044825172517448664
+Last-10 average reward: -7.3
+#Frame: 480000, Loss: 0.0004471245047170669
+Last-10 average reward: -9.0
+#Frame: 490000, Loss: 0.0004460438503883779
+Last-10 average reward: -7.5
+#Frame: 500000, Loss: 0.00044502128730528057
+Last-10 average reward: -6.4
+#Frame: 510000, Loss: 0.0004438674950506538
+Last-10 average reward: -5.4
+#Frame: 520000, Loss: 0.0004421579942572862
+Last-10 average reward: -5.5
+#Frame: 530000, Loss: 0.00044017660547979176
+Last-10 average reward: -4.6
+#Frame: 540000, Loss: 0.00043808226473629475
+Last-10 average reward: -6.0
+#Frame: 550000, Loss: 0.00043602241203188896
+Last-10 average reward: -6.3
+#Frame: 560000, Loss: 0.00043391704093664885
+Last-10 average reward: -6.2
+#Frame: 570000, Loss: 0.00043181233922950923
+Last-10 average reward: -4.2
+#Frame: 580000, Loss: 0.0004297634004615247
+Last-10 average reward: -4.4
+#Frame: 590000, Loss: 0.0004277533444110304
+Last-10 average reward: -3.9
+#Frame: 600000, Loss: 0.0004257153195794672
+Last-10 average reward: -1.6
+#Frame: 610000, Loss: 0.0004233445506542921
+Last-10 average reward: 0.4
+#Frame: 620000, Loss: 0.0004208112950436771
+Last-10 average reward: -3.9
+#Frame: 630000, Loss: 0.00041836086893454194
+Last-10 average reward: -4.5
+#Frame: 640000, Loss: 0.0004161765973549336
+Last-10 average reward: -8.4
+#Frame: 650000, Loss: 0.0004139580996707082
+Last-10 average reward: -7.2
+#Frame: 660000, Loss: 0.0004117338394280523
+Last-10 average reward: -3.2
+#Frame: 670000, Loss: 0.0004096342308912426
+Last-10 average reward: -6.0
+#Frame: 680000, Loss: 0.0004078484489582479
+Last-10 average reward: -4.9
+#Frame: 690000, Loss: 0.0004060938081238419
+Last-10 average reward: -6.6
+#Frame: 700000, Loss: 0.0004043753433506936
+Last-10 average reward: -5.9
+#Frame: 710000, Loss: 0.00040269174496643245
+Last-10 average reward: -3.8
+#Frame: 720000, Loss: 0.00040110069676302373
+Last-10 average reward: 0.3
+#Frame: 730000, Loss: 0.0003994982107542455
+Last-10 average reward: -1.8
+#Frame: 740000, Loss: 0.0003979744797106832
+Last-10 average reward: -4.6
+#Frame: 750000, Loss: 0.00039660680340602994
+Last-10 average reward: -4.6
+#Frame: 760000, Loss: 0.0003952777769882232
+Last-10 average reward: -3.9
+#Frame: 770000, Loss: 0.00039387441938742995
+Last-10 average reward: -4.6
+#Frame: 780000, Loss: 0.00039267115062102675
+Last-10 average reward: -6.7
+#Frame: 790000, Loss: 0.0003913820837624371
+Last-10 average reward: -7.7
+#Frame: 800000, Loss: 0.00039010486216284335
+Last-10 average reward: -2.6
+#Frame: 810000, Loss: 0.0003889490617439151
+Last-10 average reward: -1.5
+#Frame: 820000, Loss: 0.00038791578845120966
+Last-10 average reward: -1.7
+#Frame: 830000, Loss: 0.00038690061774104834
+Last-10 average reward: -1.8
+#Frame: 840000, Loss: 0.00038586085429415107
+Last-10 average reward: -2.8
+#Frame: 850000, Loss: 0.00038487210986204445
+Last-10 average reward: -2.3
+#Frame: 860000, Loss: 0.0003838757984340191
+Last-10 average reward: -2.3
+#Frame: 870000, Loss: 0.0003829391789622605
+Last-10 average reward: -3.9
+#Frame: 880000, Loss: 0.00038216495886445045
+Last-10 average reward: -2.9
+#Frame: 890000, Loss: 0.000381290476070717
+Last-10 average reward: -4.2
+#Frame: 900000, Loss: 0.00038039739592932165
+Last-10 average reward: -5.1
+#Frame: 910000, Loss: 0.00037961098132655025
+Last-10 average reward: -4.8
+#Frame: 920000, Loss: 0.00037884246557950974
+Last-10 average reward: -3.7
+#Frame: 930000, Loss: 0.00037809391506016254
+Last-10 average reward: -3.3
+#Frame: 940000, Loss: 0.0003774172510020435
+Last-10 average reward: -4.2
+#Frame: 950000, Loss: 0.00037670854362659156
+Last-10 average reward: -4.0
+#Frame: 960000, Loss: 0.00037597265327349305
+Last-10 average reward: -7.5
+#Frame: 970000, Loss: 0.0003752863558474928
+Last-10 average reward: -8.9
+#Frame: 980000, Loss: 0.0003745556459762156
+Last-10 average reward: -9.3
+#Frame: 990000, Loss: 0.0003738814266398549
+Last-10 average reward: -2.7
+#Frame: 1000000, Loss: 0.00037315182271413505
+Last-10 average reward: 0.2
+#Frame: 1010000, Loss: 0.000372407550457865
+Last-10 average reward: 1.6
+#Frame: 1020000, Loss: 0.00037184543907642365
+Last-10 average reward: -2.2
+#Frame: 1030000, Loss: 0.00037116423482075334
+Last-10 average reward: -3.3
+#Frame: 1040000, Loss: 0.00037047144724056125
+Last-10 average reward: -2.3
+#Frame: 1050000, Loss: 0.00036976055707782507
+Last-10 average reward: 0.3
+#Frame: 1060000, Loss: 0.0003689826116897166
+Last-10 average reward: 0.9
+#Frame: 1070000, Loss: 0.0003682621754705906
+Last-10 average reward: 2.4
+#Frame: 1080000, Loss: 0.0003675230545923114
+Last-10 average reward: 0.9
+#Frame: 1090000, Loss: 0.0003667084965854883
+Last-10 average reward: 0.8
+#Frame: 1100000, Loss: 0.00036591937532648444
+Last-10 average reward: 1.2
+#Frame: 1110000, Loss: 0.00036508403718471527
+Last-10 average reward: 3.2
+#Frame: 1120000, Loss: 0.0003642323426902294
+Last-10 average reward: 0.4
+#Frame: 1130000, Loss: 0.0003633521846495569
+Last-10 average reward: -2.8
+#Frame: 1140000, Loss: 0.00036250450648367405
+Last-10 average reward: -2.1
+#Frame: 1150000, Loss: 0.00036159579758532345
+Last-10 average reward: -5.5
+#Frame: 1160000, Loss: 0.0003606886602938175
+Last-10 average reward: -9.7
+#Frame: 1170000, Loss: 0.0003597260802052915
+Last-10 average reward: -11.2
+#Frame: 1180000, Loss: 0.0003587222017813474
+Last-10 average reward: -11.9
+#Frame: 1190000, Loss: 0.0003576976014301181
+Last-10 average reward: -14.7
+#Frame: 1200000, Loss: 0.00035673927050083876
+Last-10 average reward: -20.6
+#Frame: 1210000, Loss: 0.0003557050076778978
+Last-10 average reward: -20.9
+#Frame: 1220000, Loss: 0.0003546295047271997
+Last-10 average reward: -20.7
+#Frame: 1230000, Loss: 0.00035334855783730745
+Last-10 average reward: -19.6
+#Frame: 1240000, Loss: 0.00035199959529563785
+Last-10 average reward: -16.2
+#Frame: 1250000, Loss: 0.0003506465000100434
+Last-10 average reward: -10.9
+#Frame: 1260000, Loss: 0.0003492798423394561
+Last-10 average reward: -8.5
+#Frame: 1270000, Loss: 0.000348048226442188
+Last-10 average reward: -8.8
+#Frame: 1280000, Loss: 0.0003468436480034143
+Last-10 average reward: -9.8
+#Frame: 1290000, Loss: 0.00034574393066577613
+Last-10 average reward: -12.1
+#Frame: 1300000, Loss: 0.0003445908660069108
+Last-10 average reward: -10.6
+#Frame: 1310000, Loss: 0.00034352834336459637
+Last-10 average reward: -13.5
+#Frame: 1320000, Loss: 0.00034254210186190903
+Last-10 average reward: -11.5
+#Frame: 1330000, Loss: 0.00034160641371272504
+Last-10 average reward: -11.3
+#Frame: 1340000, Loss: 0.0003406575706321746
+Last-10 average reward: -10.3
+#Frame: 1350000, Loss: 0.0003398052940610796
+Last-10 average reward: -8.6
+#Frame: 1360000, Loss: 0.0003389720804989338
+Last-10 average reward: -8.4
+#Frame: 1370000, Loss: 0.00033819416421465576
+Last-10 average reward: -7.7
+#Frame: 1380000, Loss: 0.00033743595122359693
+Last-10 average reward: -10.3
+#Frame: 1390000, Loss: 0.00033674531732685864
+Last-10 average reward: -11.4
+#Frame: 1400000, Loss: 0.0003360671689733863
+Last-10 average reward: -10.6
+#Frame: 1410000, Loss: 0.000335428339894861
+Last-10 average reward: -10.3
+#Frame: 1420000, Loss: 0.00033480135607533157
+Last-10 average reward: -10.5
+#Frame: 1430000, Loss: 0.00033427285961806774
+Last-10 average reward: -7.4
+#Frame: 1440000, Loss: 0.0003337141533847898
+Last-10 average reward: -6.6
+#Frame: 1450000, Loss: 0.000333184318151325
+Last-10 average reward: -6.1
+#Frame: 1460000, Loss: 0.00033273728331550956
+Last-10 average reward: -7.3
+#Frame: 1470000, Loss: 0.0003322998236399144
+Last-10 average reward: -9.0
+#Frame: 1480000, Loss: 0.00033175791031681
+Last-10 average reward: -9.4
+#Frame: 1490000, Loss: 0.00033116003032773733
+Last-10 average reward: -14.7
+#Frame: 1500000, Loss: 0.00033018222893588245
+Last-10 average reward: -20.5
+20403.56user 529.52system 5:50:37elapsed 99%CPU (0avgtext+0avgdata 11898712maxresident)k
+0inputs+656032outputs (0major+258586953minor)pagefaults 0swaps
+-21.0
+3.0
+3.0
+2.0
+3.0
+2.0
+3.0
+-21.0
+-21.0
+3.0
+2.0
+3.0
+2.0
+-21.0
+20.0
+3.0
+-21.0
+20.0
+2.0
+20.0
+2.0
+3.0
+-21.0
+3.0
+-21.0
+-21.0
+3.0
+-21.0
+20.0
+-21.0
+20.0
+20.0
+3.0
+-21.0
+20.0
+20.0
+-21.0
+2.0
+3.0
+20.0
+2.0
